@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import { Button, Form, Card } from 'react-bootstrap';
 import swal2 from 'sweetalert2'
 import './style.css'
+import AuthenticationService from '../Services/AuthenticationService'
 export default class LoginPage extends Component {
 
 
@@ -26,6 +27,7 @@ export default class LoginPage extends Component {
 
     handleOnLoginClick() {
         if (this.state.email === "oeoe@gmail.com" && this.state.password === "123") {
+            AuthenticationService.storeSuccessfullLogIn(this.state.email,this.state.password)
             this.props.history.push(`/home/${this.state.email}`)
         } else {
             swal2.fire({
