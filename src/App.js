@@ -8,6 +8,7 @@ import PageNotFound from './components/PageNotFound/PageNotFound'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './components/Home/HomePage';
+import AuthenticatedRoute from './components/AuthenticatedRoute/AuthenticatedRoute'
 class App extends Component {
   render() {
     return (
@@ -16,8 +17,8 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={LoginPage}/>
           <Route path="/login" component={LoginPage}/>
-          <Route path="/listProjects" component={ListProjectPage}/>
-          <Route path="/home/:userEmail" component={HomePage}/>
+          <AuthenticatedRoute path="/listProjects" component={ListProjectPage}/>
+          <AuthenticatedRoute path="/home/:userEmail" component={HomePage}/>
           <Route component ={PageNotFound}/>
         </Switch>
         <Footer/>

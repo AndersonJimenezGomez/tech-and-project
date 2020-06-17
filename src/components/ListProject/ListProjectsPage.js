@@ -32,8 +32,8 @@ export default class ListProjectPage extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.state.projects.map(element=>(
-                            <tr>
+                        {this.state.projects.map((element,key)=>(
+                            <tr key={key}>
                                 <td>{element.client}</td>
                                 <td>{element.project}</td>
                                 <td>{element.observation}</td>
