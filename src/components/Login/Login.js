@@ -19,7 +19,6 @@ export default class LoginPage extends Component {
     }
 
     handleOnChange(event) {
-        console.log(this.state)
         this.setState({
             [event.target.name]: event.target.value
         })
@@ -36,7 +35,6 @@ export default class LoginPage extends Component {
                 icon: 'error'
             });
         }
-        console.log(this.state)
 
     }
 

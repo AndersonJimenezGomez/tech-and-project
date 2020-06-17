@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 class AuthenticationService{
 
     storeSuccessfullLogIn(email,password){
@@ -6,6 +7,11 @@ class AuthenticationService{
 
     logOut(){
         sessionStorage.removeItem('authenticatedUser');
+        console.log("deslogueo eo eo")
+        Swal.fire({
+            title: 'You have successfully logged out!',
+            icon: 'info'
+        });
     }
 
     isUserLogged(){
