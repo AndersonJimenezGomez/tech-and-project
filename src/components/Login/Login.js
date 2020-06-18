@@ -26,7 +26,7 @@ export default class LoginPage extends Component {
 
     handleOnLoginClick() {
         if (this.state.email === "oeoe@gmail.com" && this.state.password === "123") {
-            AuthenticationService.storeSuccessfullLogIn(this.state.email,this.state.password)
+            AuthenticationService.storeSuccessfullLogIn(this.state.email, this.state.password)
             this.props.history.push(`/home/${this.state.email}`)
         } else {
             swal2.fire({
@@ -46,14 +46,22 @@ export default class LoginPage extends Component {
             <div className="form">
                 <br></br>
                 <br></br>
-
                 <Card body>
+                    <br></br>
+
+                    <div className='text-center'>
+                        <a href="https://techandsolve.com/es/">
+                            <img href="https://techandsolve.com/es/" width={"120px"} height={"90px"} src={require('./logo-tech.png')} alt={"logo tech"} />
+                        </a>
+                    </div>
+                    <br></br>
+
                     <Form>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label >Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" name={"email"} value={this.state.email} onChange={this.handleOnChange} />
                             <Form.Text className="text-muted">
-                                We'll never share your email with anyone else.
+                                Your email with techAndSolve's domain (@techandsolve.com)
                         </Form.Text>
                         </Form.Group>
 

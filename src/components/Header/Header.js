@@ -14,7 +14,7 @@ import AuthenticationService from '../Services/AuthenticationService'
             <div>
                 <header>
                     <nav className="navbar navbar-expand-md navbar-dark bg-dark">
-                        <div><a href="https://techandsolve.com/es/" className="navbar-brand">TechAndProject</a></div>
+                        <div><a href="#" className="navbar-brand">TechAndProject</a></div>
                         <ul className="navbar-nav">
                             {isUserLogged && <li><Link className="nav-link" to="/home/oe">Home</Link></li>}
                             {isUserLogged && <li><Link className="nav-link" to="/listProjects">Projects</Link></li>}
